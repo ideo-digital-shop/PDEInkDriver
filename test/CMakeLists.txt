@@ -1,0 +1,23 @@
+
+include(CheckLibraryExists)
+
+include_directories(${PROJECT_BINARY_DIR})
+
+link_directories(${PROJECT_BINARY_DIR})
+
+remove_definitions(-DCMAKE_BUILD)
+
+# Simple Test
+add_executable(test_pdeinkdriver_simple_test test_pdeinkdriver_simple_test.cpp)
+set_property(TARGET test_pdeinkdriver_simple_test APPEND PROPERTY COMPILE_FLAGS -DPDEINKDRIVER_STATIC)
+target_link_libraries(test_pdeinkdriver_simple_test pdeinkdriver_static)
+add_test(test_pdeinkdriver_simple_test test_pdeinkdriver_simple_test)
+
+
+# Image Test
+add_executable(test_pdeinkdriver_image_test test_pdeinkdriver_image_test.cpp pb.xbm)
+set_property(TARGET test_pdeinkdriver_image_test APPEND PROPERTY COMPILE_FLAGS -DPDEINKDRIVER_STATIC)
+target_link_libraries(test_pdeinkdriver_image_test pdeinkdriver_static)
+add_test(test_pdeinkdriver_image_test test_pdeinkdriver_image_test)
+
+install(TARGETS test_pdeinkdriver_simple_test DESTINATION bin)

@@ -1,0 +1,5 @@
+build
+objs
+xbms
+node_modules
+.DS_Store

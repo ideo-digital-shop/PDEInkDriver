@@ -1,0 +1,3 @@
+EInk44.o: EInk44.cpp EInk44.h ../BeagleBone/gpio.h spi.h
+test_single.o: test_single.cpp xbmimg.h EInk44.h ../BeagleBone/gpio.h \
+ spi.h ../BeagleBone/epd_io.h einktest.xbm
