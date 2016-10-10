@@ -4,7 +4,9 @@ This repository is a very initial driver library for Pervasive Display's EInk Di
 
 Currently this repository supports:
 
-+ **[Pervasive Displays 4.41" Display](http://www.pervasivedisplays.com/products/441) - NOTE: Black/White display**
++ Pervasive Displays 4.41" Display
+  + **Screen: [Pervasive Displays 4.41" Display](http://www.pervasivedisplays.com/products/441) - NOTE: Black/White display**
+  + **Driver: [Pervasive Displays Mpico Driver](http://www.pervasivedisplays.com/kits/mpicosys441)**
 
 Current platforms supported:
 
